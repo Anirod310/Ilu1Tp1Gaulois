@@ -19,12 +19,17 @@ public class Romain {
 	private String speak(){
 		return "Le romain " + name + " : "; 
 	}
-	public void recevoirCoup(int forceCoup) { 
-		strength-= forceCoup; 
+	public void hitten(int punchStrength) { 
+		strength = strength - punchStrength; 
 		if (strength > 0) { 
 			Talk("Aïe"); 
 		} 
-		else 
-	{ Talk("J'abandonne..."); }
+		else { 
+			Talk("J'abandonne..."); }
+	}
+	@Override
+	public String toString() {
+		return "Romain [name=" + name +", force=" + strength + "]";
+		
 	}
 }
